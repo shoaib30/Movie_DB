@@ -27,36 +27,62 @@
 	$query3="select * from mv_gallery where mno='{$mno}'";
 	$result3= mysqli_query($connection,$query3);
 	
+	//director
+	$query4="select dname from mv_dr,directors where mno='{$mno}' and mv_dr.dno=directors.dno";
+	$result4= mysqli_query($connection,$query4);
+	
+	//actors
+	$query5="select aname from mv_ac,actor where mno='{$mno}' and actor.ano=mv_ac.ano";
+	$result5= mysqli_query($connection,$query5);
+	
 	if(!$result1)
 		die("nothing11");
 	elseif(!$result2)
 		die("nothing22");
 	elseif (!$result3)
 		die("nothing33");
+	elseif (!$result4)
+		die("nothing44");
+	elseif (!$result5)
+		die("nothing55");
 
 ?>
 
 <?php
 	$row=mysqli_fetch_assoc($result1);
 	
-		//print_r($row);
+	//movie details	
 		$mname=$row["MNAME"];
 		$rating=$row["RATING"];
 		$dor=$row["DOR"];
 		$boc=$row["BOC"];
 	
-	
+	//poster
 	$row2=mysqli_fetch_assoc($result2);
 	
 		$img_name=$row2["img_name"];
-		//print_r($row2);
-		echo $img_name;
+		
+	//gallery
 	$row3=mysqli_fetch_assoc($result3);
 	
 		$img1=$row3["IMG1"];
 		$img2=$row3["IMG2"];
 		$img3=$row3["IMG3"];
-		//print_r($row3);
+	
+	//director
+	$row4=mysqli_fetch_assoc($result4);
+		$dname=$row4["dname"];
+		
+		
+		
+	//actors
+	$aname=array();
+	$i=0;
+	while($row5=mysqli_fetch_assoc($result5))
+	{
+		$aname[$i++]=$row5["aname"];
+	}
+	
 
 ?>
 
@@ -93,10 +119,18 @@
 		<td>Rating : <?php echo $rating ?>/10</td>
 	</tr>
 	<tr class="sty1">
-		<td>Actors: Christian Bale</td>
+		<td>Actors: <?php 
+						$count=0;
+						echo $aname[$count++];
+						while($count<$i)
+						{
+							echo ", ".$aname[$count++];
+						}
+					?>
+		</td>
 	</tr>
 	<tr class="sty1">
-		<td>Director: Christopher Nolan</td>
+		<td>Director: <?php echo ucwords($dname)?></td>
 	</tr>
 	<tr >
 		<td colspan="2">Release Date: <?php echo $dor ?> </td>
