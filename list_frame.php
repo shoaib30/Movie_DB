@@ -16,7 +16,7 @@
 		noresize="noresize" scrolling="no"/>
 	<frame src= <?php
 	if($id==0)
-		echo "./lists/movie_list.xhtml";
+		echo "./lists/movieshow.php";
 	elseif($id==1)
 		echo "./lists/actor_list.xhtml";
 	elseif($id==2)

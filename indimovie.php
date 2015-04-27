@@ -112,7 +112,7 @@
 <body width="100%">
 	<table width="100%" border="0">
 	<tr>
-		<td rowspan="4" align="center"><img src="<?php echo "./Posters/$img_name"?>.jpg" alt="Poster" style="width:350px;height:500px"/></td>
+		<td rowspan="4" align="center"><img src="<?php echo "./Posters/$img_name"?>" alt="Poster" style="width:350px;height:500px"/></td>
 		<td><h1><?php echo strtoupper($mname)?></h1></td>
 	</tr>
 	<tr class="sty1">
