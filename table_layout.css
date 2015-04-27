@@ -1,0 +1,10 @@
+th{
+	font-size:1.5em;
+}
+td{
+	font-size:1em;
+	text-align:center;
+}
+body{
+	background-image: url("./bg/paper_background.jpg");
+}
