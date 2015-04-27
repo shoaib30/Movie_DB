@@ -8,18 +8,18 @@
 <frameset cols="200pt,*" frameborder="0" border="0" framespacing="0"> 
 	<frame src= <?php
 	if($id==0)
-		echo "movie_side_bar.xhtml";
+		echo "./sidebars/movie_side_bar.xhtml";
 	elseif($id==1)
-		echo "actor_side_bar.xhtml";
+		echo "./sidebars/actor_side_bar.xhtml";
 	elseif($id==2)
-		echo "movie_side_bar.xhtml"; ?>	
+		echo "./sidebars/director_side_bar.xhtml"; ?>	
 		noresize="noresize" scrolling="no"/>
 	<frame src= <?php
 	if($id==0)
-		echo "movie_list.xhtml";
+		echo "./lists/movie_list.xhtml";
 	elseif($id==1)
-		echo "actor_list.xhtml";
+		echo "./lists/actor_list.xhtml";
 	elseif($id==2)
-		echo "movie_list.xhtml"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
+		echo "./lists/director_list.xhtml"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
 </frameset>
 </html>
