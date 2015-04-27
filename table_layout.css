@@ -8,3 +8,10 @@ td{
 body{
 	background-image: url("./bg/paper_background.jpg");
 }
+a:hover {
+    text-decoration: underline;
+}
+a{
+	color:black;
+	text-decoration: none;
+}

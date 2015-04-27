@@ -1,0 +1,17 @@
+table{
+	font-size:1.2em;
+	color:white;
+	background-color:black;
+	padding: 15px;
+	border-spacing: 15px;
+}
+body{
+	background-color:black;
+}
+a:hover {
+    text-decoration: underline;
+}
+a{
+	color:white;
+	text-decoration: none;
+}
