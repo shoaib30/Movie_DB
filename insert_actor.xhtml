@@ -2,16 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://wwww.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head> <title> insert actor </title></head>
+	<br />
+	<br />
+	<br />	
+	<center><u><h2>Enter actor details</h2></u>
 	<body>
-		<form action="insert_actor_into_db.php" method="post" enctype="multipart/form-data">
-			ano<input type="text" name="ano" value="" /> <br />
-			aname<input type="text" name="aname" value="" /><br />
-			date of birth<input type="date" name="dob" value="" /> <br />
-			year of debut<input type="number" name="debut" min="1900" max="2015" value="" /> <br />
-			<label>choose pic<input type="file" name="img" value="upload"/></label>
+			<form action="insert_actor_into_db.php" method="post" enctype="multipart/form-data">
+			<table>
+			<tr align="center"><td>Actor number</td><td align="left"><input type="text" name="ano" size="21" value="" /></td></tr>
+			<tr align="center"><td>Actor name</td><td align="left"><input type="text" name="aname" size="21" value="" /></td></tr>
+			<tr align="center"><td>Date of birth</td><td align="left"><input type="date" name="dob" size="21" value="" /></td></tr>
+			<tr align="center"><td>Year of debut</td><td align="left"><input type="number" name="debut" min="1900" max="2015" value="" /></td></tr>
+			<tr align="center"><td>Upload a picture</td><td align="left"><input type="file" name="img" value="upload"/></td></tr>
 			<br/>
-			<input type="submit" name="submit" value="submit" />
+			<tr align="center"><td colspan="2" align="center"><input type="submit" name="submit" value="Submit" /></td></tr>
 			<br />
+			</table>
 		</form>
 	</body>
+	</center>
 </html>
