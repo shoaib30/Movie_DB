@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2015 at 04:47 PM
+-- Generation Time: Apr 28, 2015 at 05:38 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -72,6 +72,17 @@ CREATE TABLE IF NOT EXISTS `directors` (
 
 INSERT INTO `directors` (`DNO`, `DNAME`, `DOB`) VALUES
 (1, 'Christopher Nolan', '1970-07-30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dr_img`
+--
+
+CREATE TABLE IF NOT EXISTS `dr_img` (
+  `DNO` int(11) NOT NULL,
+  `IMG` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -219,6 +230,12 @@ ALTER TABLE `ac_img`
 --
 ALTER TABLE `directors`
  ADD PRIMARY KEY (`DNO`), ADD UNIQUE KEY `DNO` (`DNO`);
+
+--
+-- Indexes for table `dr_img`
+--
+ALTER TABLE `dr_img`
+ ADD UNIQUE KEY `DNO` (`DNO`);
 
 --
 -- Indexes for table `movie`
