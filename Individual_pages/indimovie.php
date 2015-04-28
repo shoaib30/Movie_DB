@@ -9,7 +9,7 @@
 	{
 		die("database failed". mysqli_connect_error(). " ". mysqli_connect_errno());
 	}
-	require_once("redirect.php");
+	require_once("../redirect.php");
 ?>
 
 <?php 
@@ -145,7 +145,7 @@
 		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0"></iframe><!--</caption>--></td>
 	</tr>
 	<tr>
-		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="slider.html" frameborder="0"></iframe><!--</caption>--></td>
+		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="../Gallery/SLIDER/slider.html" frameborder="0"></iframe><!--</caption>--></td>
 	</tr>
 	</table>
 </body>
