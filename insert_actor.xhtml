@@ -2,19 +2,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://wwww.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head> <title> insert actor </title></head>
-	<body background="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/theatre_masks.png"
+	<body background="theatre_masks.png"
 		style="background-position:right;background-size:480px 480px;background-repeat:no-repeat;">
-				<br />
-				<br />
-				<br />
+		<!--get the image from https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/theatre_masks.png-->
+				<br/><br/><br/>
 			<center><u><h2>Enter actor details</h2></u>
 			<form action="insert_actor_into_db.php" method="post" enctype="multipart/form-data">
 			<table>
-			<tr align="center"><td>Actor number</td><td align="left"><input type="text" name="ano" size="21" value="" /></td></tr>
-			<tr align="center"><td>Actor name</td><td align="left"><input type="text" name="aname" size="21" value="" /></td></tr>
-			<tr align="center"><td>Date of birth</td><td align="left"><input type="date" name="dob" size="21" value="" /></td></tr>
-			<tr align="center"><td>Year of debut</td><td align="left"><input type="number" name="debut" min="1900" max="2015" value="" /></td></tr>
-			<tr align="center"><td>Upload a picture</td><td align="left"><input type="file" name="img" value="upload"/></td></tr>
+			<tr><td>Actor number</td><td align="left"><input type="text" name="ano" size="21" value="" /></td></tr>
+			<tr><td>Actor name</td><td align="left"><input type="text" name="aname" size="21" value="" /></td></tr>
+			<tr><td>Date of birth</td><td align="left"><input type="date" name="dob" size="21" value="" /></td></tr>
+			<tr><td>Year of debut</td><td align="left"><input type="number" name="debut" min="1900" max="2015" value="" /></td></tr>
+			<tr><td>Upload a picture</td><td align="left"><input type="file" name="img" value="upload"/></td></tr>
 			<br/>
 			<tr align="center"><td colspan="2" align="center"><input type="submit" name="submit" value="Submit" /></td></tr>
 			<br />
@@ -23,3 +22,4 @@
 	</center>	
 	</body>
 </html>
+
