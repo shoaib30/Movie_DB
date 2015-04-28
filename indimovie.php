@@ -142,13 +142,11 @@
 		<td colspan="2"><h2>Summary</h2><br/>Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the city streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as The Joker.</td>
 	</tr>
 	<tr>
-<?php
-//		<td colspan="2"><caption style="font-size:20px">Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0"></iframe></caption></td>
-//	</tr>
-//	<tr>
-//		<td colspan="2"><caption style="font-size:20px">Gallery<iframe width="900" height="500" src="slider.html" frameborder="0"></iframe></caption></td>
-//	</tr>
-?>
+		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0"></iframe><!--</caption>--></td>
+	</tr>
+	<tr>
+		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="slider.html" frameborder="0"></iframe><!--</caption>--></td>
+	</tr>
 	</table>
 </body>
 </html>
