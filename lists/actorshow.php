@@ -12,7 +12,7 @@
 	
 ?>
 <?php
-	$query="select * from directors";
+	$query="select * from actor";
 	
 	$result= mysqli_query($connection,$query);
 	
@@ -24,12 +24,13 @@
 
 
 
+
 <?xml version='1.0' encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhhtml.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Director List</title>
+	<title>Actor List</title>
 	<link type = "text/css" rel = "stylesheet" href = "table_layout.css" />
 </head>
 
@@ -37,7 +38,7 @@
 	<table width="100%" align="center">
 		<tr>
 			<th>Sl. No. </th>
-			<th>Director Name </th>
+			<th>Actor Name </th>
 			<th>Date of Birth</th>
 		</tr>
 		<tr>
@@ -48,11 +49,11 @@
 			{
 				
 				echo "<tr>";
-					echo"<td>".$row["DNO"]."</td>";
+					echo"<td>".$row["ANO"]."</td>";
 					echo"<td>";
-		?> 						<a href="../Individual_pages/indiactor.php?ano=<?php echo $row["DNO"] ?>"> 
+		?> 						<a href="../Individual_pages/indiactor.php?ano=<?php echo $row["ANO"] ?>"> 
 		<?php 		
-					echo $row["DNAME"]."</a>"."</td>";
+					echo $row["ANAME"]."</a>"."</td>";
 					echo"<td>".$row["DOB"]."</td>";
 				echo "</tr>";
 		?>
@@ -63,4 +64,4 @@
 		?>
 	</table>
  </body>
- </html>
+</html>

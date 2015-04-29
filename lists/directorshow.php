@@ -50,7 +50,7 @@
 				echo "<tr>";
 					echo"<td>".$row["DNO"]."</td>";
 					echo"<td>";
-		?> 						<a href="../Individual_pages/indiactor.php?ano=<?php echo $row["DNO"] ?>"> 
+		?> 						<a href="../Individual_pages/indidirector.php?dno=<?php echo $row["DNO"] ?>"> 
 		<?php 		
 					echo $row["DNAME"]."</a>"."</td>";
 					echo"<td>".$row["DOB"]."</td>";

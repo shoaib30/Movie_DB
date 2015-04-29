@@ -13,9 +13,9 @@
 ?>
 <?php
 	$query="select * from movie";
-	$query2="select * from mv_post";
+	
 	$result= mysqli_query($connection,$query);
-	$result2= mysqli_query($connection,$query2);
+	
 	
 	if(!$result)
 		die("nothing");

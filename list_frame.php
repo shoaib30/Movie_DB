@@ -18,8 +18,8 @@
 	if($id==0)
 		echo "./lists/movieshow.php";
 	elseif($id==1)
-		echo "./lists/actor_list.xhtml";
+		echo "./lists/actorshow.php";
 	elseif($id==2)
-		echo "./lists/director_list.xhtml"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
+		echo "./lists/directorshow.php"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
 </frameset>
 </html>
