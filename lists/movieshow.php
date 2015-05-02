@@ -49,7 +49,7 @@
 				echo "<tr>";
 					echo"<td>".$row["MNO"]."</td>";
 					echo"<td>";
-		?> 						<a href="../Individual_pages/indimovie.php?mno=<?php echo $row["MNO"] ?>"> 
+		?> 						<a href="../Individual_pages/indimovie.php?mno=<?php echo $row["MNO"] ?>" target="mainframe"> 
 		<?php 		
 					echo $row["MNAME"]."</a>"."</td>";
 					echo"<td>".$row["RATING"]."</td>";

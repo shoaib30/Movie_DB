@@ -51,7 +51,7 @@
 				echo "<tr>";
 					echo"<td>".$row["ANO"]."</td>";
 					echo"<td>";
-		?> 						<a href="../Individual_pages/indiactor.php?ano=<?php echo $row["ANO"] ?>"> 
+		?> 						<a href="../Individual_pages/indiactor.php?ano=<?php echo $row["ANO"] ?>" target="mainframe"> 
 		<?php 		
 					echo $row["ANAME"]."</a>"."</td>";
 					echo"<td>".$row["DOB"]."</td>";
