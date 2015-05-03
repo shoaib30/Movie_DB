@@ -1,9 +1,11 @@
 th{
 	font-size:1.5em;
+	font-family:"Copperplate Gothic Light";
 }
 td{
 	font-size:1em;
 	text-align:center;
+	font-family:"Trajan Pro";
 }
 body{
 	background-image: url("./bg/paper_back.jpg");
