@@ -26,7 +26,7 @@
 	$result= mysqli_query($connection,$query);
 	
 	//inserting poster
-	$uploads_dir = './Posters';
+	$uploads_dir = '../Posters';
 	$tmp_name = $_FILES["file"]["tmp_name"];
     $name = $_FILES["file"]["name"];
     move_uploaded_file($tmp_name, "$uploads_dir/$name");
@@ -34,7 +34,7 @@
 	$result2= mysqli_query($connection,$query2);
 	
 	//insert gallery
-	$uploads_dir = './Gallery';
+	$uploads_dir = '../Gallery';
 	$tmp_name1 = $_FILES["img1"]["tmp_name"];
 	$tmp_name2 = $_FILES["img2"]["tmp_name"];
 	$tmp_name3 = $_FILES["img3"]["tmp_name"];

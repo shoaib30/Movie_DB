@@ -33,5 +33,5 @@
 	elseif(!$result2)
 		die("nothing22");
 	else
-		redirect_to("movieshow.php")
+		redirect_to("success.php")
 ?>

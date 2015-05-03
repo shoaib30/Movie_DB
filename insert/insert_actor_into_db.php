@@ -22,7 +22,7 @@
 	$result1= mysqli_query($connection,$query);
 	
 	//inserting the actor image
-	$uploads_dir = './Actor_img';
+	$uploads_dir = '../Actor_img';
 	$tmp_name = $_FILES["img"]["tmp_name"];
     $name = $_FILES["img"]["name"];
     move_uploaded_file($tmp_name, "$uploads_dir/$name");
@@ -35,7 +35,7 @@
 	elseif(!$result2)
 		die("nothing22");
 	else
-		redirect_to("actorshow.php");
+		redirect_to("success.php");
 ?>
 <?php
 	mysqli_close($connection);
