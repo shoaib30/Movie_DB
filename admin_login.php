@@ -7,5 +7,5 @@
 	if($user=="sid" && $pass="Shoaib@123")
 		redirect_to("./insert/insert_frame.xhtml");
 	else
-		echo "Wrong Credentials.";
+		echo "<h1>Wrong Credentials</h1>";
 ?>
