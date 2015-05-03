@@ -5,11 +5,9 @@
 <head>
 	<title>Success</title>
 </head>
-<body align="center">
+<body align="center" background="theatre_masks.png" style="background-position:top right;background-size:280px 280px;background-repeat:no-repeat;">
 	<h1>Successfully Added</h1>
 </body>
 <?php require_once("../redirect.php");
-	sleep(5);
-	
-	redirect_to("insert_main.xhtml");
+	redirect_to("insert_home.xhtml");
 ?>
