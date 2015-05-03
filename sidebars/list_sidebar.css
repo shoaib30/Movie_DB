@@ -1,11 +1,16 @@
 table{
 	font-size:1.2em;
+	font-family:"Squares Bold";
 	color:white;
 	background-color:black;
 	padding: 15px;
 	border-spacing: 15px;
 }
+th,tr{
+	font-family:"Squares";
+}
 body{
+	font-family:"Squares Bold";
 	background-color:black;
 }
 a:hover {

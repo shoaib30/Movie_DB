@@ -5,7 +5,7 @@
 
 <?php $id=$_GET["id"];?>
 
-<frameset cols="200pt,*" frameborder="0" border="0" framespacing="0"> 
+<frameset cols="300pt,*" frameborder="0" border="0" framespacing="0"> 
 	<frame src= <?php
 	if($id==0)
 		echo "./sidebars/movie_side_bar.xhtml";
