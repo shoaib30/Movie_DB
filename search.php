@@ -1,3 +1,7 @@
+<?xml version='1.0' encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
 <?php 
 	$dbhost="localhost";
 	$dbuser="sid";
@@ -29,7 +33,10 @@
 	if($cat==1)
 	{
 		$red=$row["MNO"];
-		redirect_to("./Individual_pages/indimovie.php?mno=$red");
+		?><script type="text/javascript">
+		top.location.href = "./Individual_pages/indimovie.php?mno=<?php echo $red?>"
+		</script><?php
+		//redirect_to("./Individual_pages/indimovie.php?mno=$red");
 	}
 	elseif($cat==2)
 	{
@@ -43,3 +50,5 @@
 	}
 	echo $red;
 ?>
+</body>
+</html>
