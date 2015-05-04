@@ -34,7 +34,7 @@
 	{
 		$red=$row["MNO"];
 		?><script type="text/javascript">
-		top.location.href = "./Individual_pages/indimovie.php?mno=<?php echo $red?>"
+		window.parent.location.href = "./Individual_pages/indimovie.php?mno=<?php echo $red?>"
 		</script><?php
 		//redirect_to("./Individual_pages/indimovie.php?mno=$red");
 	}
