@@ -23,7 +23,7 @@
 	$result2= mysqli_query($connection,$query2);
 	
 	//all movies directed
-	$query3="select mname from movie,mv_dr where movie.mno=mv_dr.mno and dno='{$dno}'";
+	$query3="select movie.mno,mname from movie,mv_dr where movie.mno=mv_dr.mno and dno='{$dno}'";
 	$result3= mysqli_query($connection,$query3);
 	
 	
@@ -45,9 +45,11 @@
 		$img=$row2["img"];
 		
 	$mname=array();
+	$mno=array();
 	$i=0;
 	while($row3=mysqli_fetch_assoc($result3))
 	{
+		$mno[$i]=$row3["mno"];
 		$mname[$i++]=$row3["mname"];
 	}
 	
@@ -77,14 +79,34 @@
 	</tr>
 
 	<tr>
-		<td colspan="2" align="center">Movies Directed : <?php 
+		<td colspan="2" align="center">Movies Directed :
+																<?php 
+															
 																if($i)
 																{
 																	$count=0;
+															?>
+																<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+															
+															<?php
 																	echo $mname[$count++];
+															?>
+																</a>
+															
+															<?php
+																
 																	while($count<$i)
 																	{
-																		echo ", ".$mname[$count++];
+																		echo ", ";
+															?>	
+															
+																<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+															
+															<?php
+																		echo $mname[$count++];
+															?>
+																</a>
+															<?php
 																	}
 																}
 															?> </td>

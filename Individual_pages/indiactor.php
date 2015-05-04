@@ -23,7 +23,7 @@
 	$result2= mysqli_query($connection,$query2);
 	
 	//all movies acted
-	$query3="select mname from movie,mv_ac where movie.mno=mv_ac.mno and ano='{$ano}'";
+	$query3="select mname,movie.mno from movie,mv_ac where movie.mno=mv_ac.mno and ano='{$ano}'";
 	$result3= mysqli_query($connection,$query3);
 	
 	
@@ -47,11 +47,14 @@
 		$img=$row2["img_name"];
 		
 	$mname=array();
+	$mno=array();
 	$i=0;
 	while($row3=mysqli_fetch_assoc($result3))
 	{
+		$mno[$i]=$row3["mno"];
 		$mname[$i++]=$row3["mname"];
 	}
+	
 	
 	
 	
@@ -82,12 +85,34 @@
 	<tr>
 		<td colspan="2" align="center">Movies Acted in : 
 															<?php 
+															
+															if($i)
+															{
 																$count=0;
+															?>
+															<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+															
+															<?php
 																echo $mname[$count++];
+															?>
+															</a>
+															
+															<?php
+																
 																while($count<$i)
 																{
-																	echo ", ".$mname[$count++];
+																	echo ", ";
+															?>
+															
+															<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+															
+															<?php
+																	echo $mname[$count++];
+															?>
+															</a>
+															<?php
 																}
+															}
 															?> </td>
 	</tr>
 	</table>
