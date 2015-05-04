@@ -12,7 +12,20 @@
 	
 ?>
 <?php
-	$query="select * from movie";
+
+	
+		$sort=$_GET["sort"];
+		if($sort==1)
+			$query="select * from movie";
+		elseif($sort==2)
+			$query="select * from movie order by mname";
+		elseif($sort==3)
+			$query="select * from movie order by rating";
+		elseif($sort==4)
+			$query="select * from movie order by dor";
+	
+	
+	
 	
 	$result= mysqli_query($connection,$query);
 	

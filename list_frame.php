@@ -16,10 +16,10 @@
 		noresize="noresize" scrolling="no"/>
 	<frame src= <?php
 	if($id==0)
-		echo "./lists/movieshow.php";
+		echo "./lists/movieshow.php?sort=1";
 	elseif($id==1)
-		echo "./lists/actorshow.php";
+		echo "./lists/actorshow.php?sort=1";
 	elseif($id==2)
-		echo "./lists/directorshow.php"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
+		echo "./lists/directorshow.php?sort=1"; ?> frameborder="0" noresize="noresize" name="list_frame"/>
 </frameset>
 </html>

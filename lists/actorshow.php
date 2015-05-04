@@ -12,8 +12,14 @@
 	
 ?>
 <?php
-	$query="select * from actor";
-	
+	$sort=$_GET["sort"];
+	if($sort==1)
+		$query="select * from actor";
+	elseif($sort==2)
+		$query="select * from actor order by aname";
+	elseif($sort==3)
+		$query="select * from actor order by dob";
+		
 	$result= mysqli_query($connection,$query);
 	
 	

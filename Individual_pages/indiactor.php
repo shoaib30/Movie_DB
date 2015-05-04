@@ -86,33 +86,33 @@
 		<td colspan="2" align="center">Movies Acted in : 
 															<?php 
 															
-															if($i)
-															{
-																$count=0;
-															?>
-															<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
-															
-															<?php
-																echo $mname[$count++];
-															?>
-															</a>
-															
-															<?php
-																
-																while($count<$i)
+																if($i)
 																{
-																	echo ", ";
+																	$count=0;
 															?>
-															
-															<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+																<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
 															
 															<?php
 																	echo $mname[$count++];
 															?>
-															</a>
+																</a>
+															
 															<?php
+																
+																	while($count<$i)
+																	{
+																		echo ", ";
+															?>	
+															
+																<a href="indimovie.php?mno=<?php echo $mno[$count]; ?>">
+															
+															<?php
+																		echo $mname[$count++];
+															?>
+																</a>
+															<?php
+																	}
 																}
-															}
 															?> </td>
 	</tr>
 	</table>

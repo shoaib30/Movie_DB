@@ -12,7 +12,13 @@
 	
 ?>
 <?php
-	$query="select * from directors";
+	$sort=$_GET["sort"];
+	if($sort==1)
+		$query="select * from director";
+	elseif($sort==2)
+		$query="select * from director order by dname";
+	elseif($sort==3)
+		$query="select * from director order by dob";
 	
 	$result= mysqli_query($connection,$query);
 	
