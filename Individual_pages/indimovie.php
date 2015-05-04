@@ -28,11 +28,11 @@
 	$result3= mysqli_query($connection,$query3);
 	
 	//director
-	$query4="select dname from mv_dr,directors where mno='{$mno}' and mv_dr.dno=directors.dno";
+	$query4="select dname,directors.dno from mv_dr,directors where mno='{$mno}' and mv_dr.dno=directors.dno";
 	$result4= mysqli_query($connection,$query4);
 	
 	//actors
-	$query5="select aname from mv_ac,actor where mno='{$mno}' and actor.ano=mv_ac.ano";
+	$query5="select aname,actor.ano from mv_ac,actor where mno='{$mno}' and actor.ano=mv_ac.ano";
 	$result5= mysqli_query($connection,$query5);
 	
 	if(!$result1)
@@ -72,14 +72,16 @@
 	//director
 	$row4=mysqli_fetch_assoc($result4);
 		$dname=$row4["dname"];
-		
+		$dno=$row4["dno"];
 		
 		
 	//actors
 	$aname=array();
+	$ano=array();
 	$i=0;
 	while($row5=mysqli_fetch_assoc($result5))
 	{
+		$ano[$i]=$row5["ano"];
 		$aname[$i++]=$row5["aname"];
 	}
 	
@@ -121,16 +123,30 @@
 	<tr class="sty1">
 		<td>Actors: <?php 
 						$count=0;
+					?>
+						<a href="indiactor.php?ano=<?php echo $ano[$count]; ?>">
+					<?php
 						echo $aname[$count++];
+					?>
+						</a>
+					<?php
 						while($count<$i)
 						{
-							echo ", ".$aname[$count++];
+							echo ", ";
+					?>
+					
+						<a href="indiactor.php?ano=<?php echo $ano[$count]; ?>">
+					<?php							
+							echo $aname[$count++];
+					?>
+						</a>
+					<?php
 						}
 					?>
 		</td>
 	</tr>
 	<tr class="sty1">
-		<td>Director: <?php echo ucwords($dname)?></td>
+		<td>Director:<a href="indidirector.php?dno=<?php echo $dno; ?>"> <?php echo ($dname)?> </a> </td>
 	</tr>
 	<tr >
 		<td colspan="2">Release Date: <?php echo $dor ?> </td>
