@@ -47,6 +47,16 @@
 	$query3="INSERT into mv_gallery values('{$mno}','{$name1}','{$name2}','{$name3}')";
 	$result3= mysqli_query($connection,$query3);
 	
+	//insert trailer
+	$trailer=$_POST["trailer"];
+	$query4="insert into mv_tr values('{$mno}','{$trailer}');";
+	$result4= mysqli_query($connection,$query4);
+	
+	//insert summary
+	$sum=$_POST["sum"];
+	$query5="insert into summary values('{$mno}','{$sum}');";
+	$result5= mysqli_query($connection,$query5);
+	
 	//checking for errors in insertion
 	if(!$result)
 		die("nothing11");
@@ -54,6 +64,10 @@
 		die("nothing22");
 	elseif(!$result3)
 		die("noting33");
+	elseif(!$result4)
+		die("noting44");
+	elseif(!$result5)
+		die("noting55");
 ?>
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://wwww.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
