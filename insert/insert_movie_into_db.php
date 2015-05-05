@@ -49,12 +49,12 @@
 	
 	//insert trailer
 	$trailer=$_POST["trailer"];
-	$query4="insert into mv_tr values('{$mno}','{$trailer}');";
+	$query4="insert into mv_tr values('{$mno}','{$trailer}')";
 	$result4= mysqli_query($connection,$query4);
 	
 	//insert summary
 	$sum=$_POST["sum"];
-	$query5="insert into summary values('{$mno}','{$sum}');";
+	$query5="insert into summary values('{$mno}','{$sum}')";
 	$result5= mysqli_query($connection,$query5);
 	
 	//checking for errors in insertion

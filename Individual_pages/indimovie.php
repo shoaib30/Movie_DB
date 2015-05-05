@@ -35,6 +35,15 @@
 	$query5="select aname,actor.ano from mv_ac,actor where mno='{$mno}' and actor.ano=mv_ac.ano";
 	$result5= mysqli_query($connection,$query5);
 	
+	//summary
+	$query6="select sum from summary where mno='{$mno}' ";
+	$result6= mysqli_query($connection,$query6);
+	
+	//trailer
+	$query7="select tr from mv_tr where mno='{$mno}' ";
+	$result7= mysqli_query($connection,$query7);
+	
+	
 	if(!$result1)
 		die("nothing11");
 	elseif(!$result2)
@@ -45,7 +54,10 @@
 		die("nothing44");
 	elseif (!$result5)
 		die("nothing55");
-
+	elseif (!$result6)
+		die("nothing66");
+	elseif (!$result7)
+		die("nothing77");
 ?>
 
 <?php
@@ -85,6 +97,13 @@
 		$aname[$i++]=$row5["aname"];
 	}
 	
+	//summary
+	$row6=mysqli_fetch_assoc($result6);
+	$sum=$row6["sum"];
+	
+	//trailer
+	$row7=mysqli_fetch_assoc($result7);
+	$tr=$row7["tr"];
 
 ?>
 
@@ -155,10 +174,10 @@
 		<td colspan="2">Box Office Collection: $<?php echo $boc ?> </td>
 	</tr>
 	<tr>
-		<td colspan="2"><h2>Summary</h2><br/>Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the city streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as The Joker.</td>
+		<td colspan="2"><h2>Summary</h2><br/><?php echo $sum; ?></td>
 	</tr>
 	<tr>
-		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0"></iframe><!--</caption>--></td>
+		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/<?php echo $tr;?>" frameborder="0"></iframe><!--</caption>--></td>
 	</tr>
 	<tr>
 		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="../Gallery/SLIDER/slider.html" frameborder="0"></iframe><!--</caption>--></td>
