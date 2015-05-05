@@ -33,10 +33,7 @@
 	if($cat==1)
 	{
 		$red=$row["MNO"];
-		?><script type="text/javascript">
-		window.parent.location.href = "./Individual_pages/indimovie.php?mno=<?php echo $red?>"
-		</script><?php
-		//redirect_to("./Individual_pages/indimovie.php?mno=$red");
+		redirect_to("./Individual_pages/indimovie.php?mno=$red");
 	}
 	elseif($cat==2)
 	{
