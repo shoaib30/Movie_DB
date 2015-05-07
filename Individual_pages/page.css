@@ -3,6 +3,11 @@ tr.sty1
 	font-size:25px;
 	font-family:"Copperplate Gothic",serif;
 }
+tr.sty2
+{
+	font-size:22px;
+	text-align:center;
+}
 h1
 {
 	font-size:45px;

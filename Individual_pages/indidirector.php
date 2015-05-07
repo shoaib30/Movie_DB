@@ -78,7 +78,7 @@
 		<td>Date Of birth : <?php echo $dob ?></td>
 	</tr>
 
-	<tr>
+	<tr class="sty2">
 		<td colspan="2" align="center">Movies Directed :
 																<?php 
 															

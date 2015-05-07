@@ -82,7 +82,7 @@
 	<tr class="sty1">
 		<td>Debut : <?php echo $debut ?></td>
 	</tr>
-	<tr>
+	<tr class="sty2">
 		<td colspan="2" align="center">Movies Acted in : 
 															<?php 
 															

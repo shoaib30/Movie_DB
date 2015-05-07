@@ -116,18 +116,7 @@
 
 <head>
 	<title>Page</title>
-	<style>
-	tr.sty1
-	{
-		font-size:25px;
-		font-family:"Copperplate Gothic",serif;
-	}
-	h1
-	{
-		font-size:45px;
-		font-family:"Copperplate Gothic",serif;
-	}
-	</style>
+	<link type = "text/css" rel = "stylesheet" href = "page.css"/>
 </head>
 
 <body width="100%">
@@ -167,20 +156,28 @@
 	<tr class="sty1">
 		<td>Director:<a href="indidirector.php?dno=<?php echo $dno; ?>"> <?php echo ($dname)?> </a> </td>
 	</tr>
-	<tr >
+	<tr class="sty2">
 		<td colspan="2">Release Date: <?php echo $dor ?> </td>
 	</tr>
-	<tr>
+	<tr class="sty2">
 		<td colspan="2">Box Office Collection: $<?php echo $boc ?> </td>
 	</tr>
-	<tr>
+	<tr class="sty2">
 		<td colspan="2"><h2>Summary</h2><br/><?php echo $sum; ?></td>
 	</tr>
-	<tr>
-		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/<?php echo $tr;?>" frameborder="0"></iframe><!--</caption>--></td>
+	<tr class="sty2">
+		<td colspan="2" align="center"><hr size="5" color="black"/></td>
+	</tr>
+	<tr class="sty2">
+		<td><h2>Trailer</h2></td>
+		<td><iframe width="720" height="480" src="https://www.youtube.com/embed/<?php echo $tr;?>" frameborder="0"></iframe></td>
 	</tr>
 	<tr>
-		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="../Gallery/SLIDER/slider.php?mno=<?php echo $mno;?>" frameborder="0"></iframe><!--</caption>--></td>
+		<td colspan="2"><hr size="5" color="black"/></td>
+	</tr>
+	<tr class="sty2">
+		<td><h2>Gallery</h2></td>
+		<td><iframe width="900" height="500" src="../Gallery/SLIDER/slider.php?mno=<?php echo $mno;?>" frameborder="0"></iframe></td>
 	</tr>
 	</table>
 </body>
