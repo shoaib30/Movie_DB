@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2015 at 04:31 PM
+-- Generation Time: May 07, 2015 at 07:37 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -170,7 +170,21 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `DOR` date NOT NULL,
   `RATING` float NOT NULL,
   `BOC` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
+
+--
+-- Dumping data for table `movie`
+--
+
+INSERT INTO `movie` (`MNO`, `MNAME`, `DOR`, `RATING`, `BOC`) VALUES
+(1, 'The Dark Knight', '2008-07-24', 9.9, 533316061),
+(2, 'The Dark Knight Rises', '2012-07-20', 8.5, 448130642),
+(3, 'Batman Begins', '2005-05-16', 8.3, 205343774),
+(4, 'Inception', '0000-00-00', 8.8, 292568851),
+(5, 'Interstellar', '2014-11-07', 8.7, 187991439),
+(6, 'The Prestige', '2006-11-10', 8.5, 53082743),
+(7, 'X-Men Origins: Wolverine', '2009-04-29', 6.9, 179883016),
+(8, 'Avengers: Age of Ultron', '2015-04-23', 8.1, 217632476);
 
 -- --------------------------------------------------------
 
@@ -184,6 +198,43 @@ CREATE TABLE IF NOT EXISTS `mv_ac` (
   `ANO` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='links movies and actors';
 
+--
+-- Dumping data for table `mv_ac`
+--
+
+INSERT INTO `mv_ac` (`MNO`, `ANO`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 6),
+(2, 1),
+(2, 4),
+(2, 5),
+(2, 6),
+(3, 1),
+(3, 6),
+(3, 7),
+(4, 6),
+(4, 8),
+(4, 9),
+(4, 10),
+(5, 5),
+(5, 6),
+(5, 11),
+(5, 12),
+(6, 1),
+(6, 6),
+(6, 13),
+(6, 14),
+(7, 0),
+(7, 13),
+(7, 15),
+(7, 16),
+(8, 14),
+(8, 17),
+(8, 18),
+(8, 20);
+
 -- --------------------------------------------------------
 
 --
@@ -195,6 +246,20 @@ CREATE TABLE IF NOT EXISTS `mv_dr` (
   `MNO` int(11) NOT NULL DEFAULT '0',
   `DNO` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mv_dr`
+--
+
+INSERT INTO `mv_dr` (`MNO`, `DNO`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 2),
+(8, 4);
 
 -- --------------------------------------------------------
 
@@ -210,6 +275,20 @@ CREATE TABLE IF NOT EXISTS `mv_gallery` (
   `IMG3` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='contains ';
 
+--
+-- Dumping data for table `mv_gallery`
+--
+
+INSERT INTO `mv_gallery` (`MNO`, `IMG1`, `IMG2`, `IMG3`) VALUES
+(1, 'dk1.jpg', 'dk3.jpg', 'dk4.jpg'),
+(2, 'tdkr1.jpg', 'tdkr2.jpg', 'tdkr3.jpg'),
+(3, 'bmb1.jpg', 'bmb2.jpg', 'bmb3.jpg'),
+(4, 'inc1.jpg', 'inc2.jpg', 'inc3.jpg'),
+(5, 'int1.jpg', 'int2.jpg', 'int3.jpg'),
+(6, 'pre1.jpg', 'pre2.jpg', 'pre3.jpg'),
+(7, 'wolv1.jpg', 'wolv2.jpg', 'wolv3.jpg'),
+(8, 'ave1.jpg', 'ave2.jpg', 'ave3.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -221,6 +300,20 @@ CREATE TABLE IF NOT EXISTS `mv_post` (
   `MNO` int(11) NOT NULL,
   `IMG_NAME` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains posters of the movies';
+
+--
+-- Dumping data for table `mv_post`
+--
+
+INSERT INTO `mv_post` (`MNO`, `IMG_NAME`) VALUES
+(1, 'dark_poster.jpg'),
+(2, 'tdkrp.jpg'),
+(3, 'bmbp.jpg'),
+(4, 'incp.jpg'),
+(5, 'intp.jpg'),
+(6, 'prep.jpg'),
+(7, 'wolvp.jpg'),
+(8, 'avep.jpg');
 
 -- --------------------------------------------------------
 
@@ -234,6 +327,20 @@ CREATE TABLE IF NOT EXISTS `mv_tr` (
   `tr` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains the Trailer vidoeID';
 
+--
+-- Dumping data for table `mv_tr`
+--
+
+INSERT INTO `mv_tr` (`MNO`, `tr`) VALUES
+(1, 'EXeTwQWrcwY'),
+(3, 'vak9ZLfhGnQ'),
+(4, '66TuSJo4dZM'),
+(2, 'g8evyE9TuYk'),
+(5, '0vxOhd4qlnA'),
+(6, 'o4gHCmTQDVI'),
+(7, 'LPmbGzQaOCs'),
+(8, 'JAUoeqvedMo');
+
 -- --------------------------------------------------------
 
 --
@@ -245,6 +352,20 @@ CREATE TABLE IF NOT EXISTS `summary` (
   `MNO` int(11) DEFAULT NULL,
   `SUM` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `summary`
+--
+
+INSERT INTO `summary` (`MNO`, `SUM`) VALUES
+(1, 'Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the city streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as The Joker.'),
+(3, 'After training with his mentor, Batman begins his war on crime to free the crime-ridden Gotham City from corruption that the Scarecrow and the League of Shadows have cast upon it.'),
+(4, 'A thief who steals corporate secrets through use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.'),
+(2, 'Despite his tarnished reputation after the events of The Dark Knight, in which he took the rap for Dent''s crimes, Batman feels compelled to intervene to assist the city and its police force which is struggling to cope with Bane''s plans to destroy the city.'),
+(5, 'In the near future, Earth has been devastated by drought and famine, causing a scarcity in food and extreme changes in climate. When humanity is facing extinction, a mysterious rip in the space-time continuum is discovered, giving mankind the opportunity to widen its lifespan. A group of explorers must travel beyond our solar system in search of a planet that can sustain life. The crew of the Endurance are required to think bigger and go further than any human in history as they embark on an interstellar voyage into the unknown. Coop, the pilot of the Endurance, must decide between seeing his children again and the future of the human race.'),
+(6, 'In the end of the Nineteenth Century, in London, Robert Angier, his beloved wife Julia McCullough and Alfred Borden are friends and assistants of a magician. When Julia accidentally dies during a performance, Robert blames Alfred for her death and they become enemies. Both become famous and rival magicians, sabotaging the performance of the other on the stage. When Alfred performs a successful trick, Robert becomes obsessed trying to disclose the secret of his competitor with tragic consequences.'),
+(7, 'Two mutant brothers, Logan and Victor, born 200 years ago, suffer childhood trauma and have only each other to depend on. Basically, they''re fighters and killers, living from war to war through U.S. history. In modern times, a U.S. colonel, Stryker, recruits them and other mutants as commandos. Logan quits and becomes a logger, falling in love with a local teacher. When Logan refuses to rejoin Stryker''s crew, the colonel sends the murderous Victor. Logan now wants revenge.'),
+(8, 'When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth''s Mightiest Heroes, including Iron Man, Captain America, Thor, the Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for a global adventure.');
 
 --
 -- Indexes for dumped tables
@@ -328,7 +449,7 @@ MODIFY `DNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

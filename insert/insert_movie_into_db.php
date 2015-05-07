@@ -67,7 +67,7 @@
 	elseif(!$result4)
 		die("noting44");
 	elseif(!$result5)
-		die("noting55");
+		//die("noting55");
 ?>
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://wwww.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
