@@ -77,9 +77,11 @@
 	<tr class="sty1">
 		<td>Date Of birth : <?php echo $dob ?></td>
 	</tr>
-
+	<tr>
+		<td colspan="2"><hr size="2" color="black"/></td>
+	</tr>
 	<tr class="sty2">
-		<td colspan="2" align="center">Movies Directed :
+		<td colspan="2" align="center"><br/>Movies Directed : <br/>
 																<?php 
 															
 																if($i)
