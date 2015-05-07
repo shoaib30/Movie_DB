@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2015 at 07:37 PM
+-- Generation Time: May 07, 2015 at 09:30 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -170,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `DOR` date NOT NULL,
   `RATING` float NOT NULL,
   `BOC` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
 
 --
 -- Dumping data for table `movie`
@@ -184,7 +184,11 @@ INSERT INTO `movie` (`MNO`, `MNAME`, `DOR`, `RATING`, `BOC`) VALUES
 (5, 'Interstellar', '2014-11-07', 8.7, 187991439),
 (6, 'The Prestige', '2006-11-10', 8.5, 53082743),
 (7, 'X-Men Origins: Wolverine', '2009-04-29', 6.9, 179883016),
-(8, 'Avengers: Age of Ultron', '2015-04-23', 8.1, 217632476);
+(8, 'Avengers: Age of Ultron', '2015-04-23', 8.1, 217632476),
+(9, 'Captain America: The Winter Soldier', '2014-03-26', 7.8, 259746958),
+(10, 'Iron Man', '2008-05-02', 7.9, 318298180),
+(11, 'Iron Man 2', '2010-04-30', 7.1, 312057433),
+(12, 'Iron Man 3', '2013-04-25', 7.3, 408992272);
 
 -- --------------------------------------------------------
 
@@ -233,7 +237,19 @@ INSERT INTO `mv_ac` (`MNO`, `ANO`) VALUES
 (8, 14),
 (8, 17),
 (8, 18),
-(8, 20);
+(8, 20),
+(9, 14),
+(9, 18),
+(9, 19),
+(10, 17),
+(10, 21),
+(10, 22),
+(11, 17),
+(11, 21),
+(11, 23),
+(12, 17),
+(12, 21),
+(12, 24);
 
 -- --------------------------------------------------------
 
@@ -259,7 +275,11 @@ INSERT INTO `mv_dr` (`MNO`, `DNO`) VALUES
 (5, 1),
 (6, 1),
 (7, 2),
-(8, 4);
+(8, 4),
+(9, 6),
+(10, 5),
+(11, 5),
+(12, 3);
 
 -- --------------------------------------------------------
 
@@ -287,7 +307,11 @@ INSERT INTO `mv_gallery` (`MNO`, `IMG1`, `IMG2`, `IMG3`) VALUES
 (5, 'int1.jpg', 'int2.jpg', 'int3.jpg'),
 (6, 'pre1.jpg', 'pre2.jpg', 'pre3.jpg'),
 (7, 'wolv1.jpg', 'wolv2.jpg', 'wolv3.jpg'),
-(8, 'ave1.jpg', 'ave2.jpg', 'ave3.jpg');
+(8, 'ave1.jpg', 'ave2.jpg', 'ave3.jpg'),
+(9, 'cap1.jpg', 'cap2.jpg', 'cap3.jpg'),
+(10, 'im11.jpg', 'im12.jpg', 'im13.jpg'),
+(11, 'im21.jpg', 'im22.jpg', 'im23.jpg'),
+(12, 'im31.jpg', 'im32.jpg', 'im33.jpg');
 
 -- --------------------------------------------------------
 
@@ -313,7 +337,11 @@ INSERT INTO `mv_post` (`MNO`, `IMG_NAME`) VALUES
 (5, 'intp.jpg'),
 (6, 'prep.jpg'),
 (7, 'wolvp.jpg'),
-(8, 'avep.jpg');
+(8, 'avep.jpg'),
+(9, 'capp.jpg'),
+(10, 'im1p.jpg'),
+(11, 'im2p.jpg'),
+(12, 'im3p.jpg');
 
 -- --------------------------------------------------------
 
@@ -339,7 +367,11 @@ INSERT INTO `mv_tr` (`MNO`, `tr`) VALUES
 (5, '0vxOhd4qlnA'),
 (6, 'o4gHCmTQDVI'),
 (7, 'LPmbGzQaOCs'),
-(8, 'JAUoeqvedMo');
+(8, 'JAUoeqvedMo'),
+(9, '7SlILk2WMTI'),
+(10, '8hYlB38asDY'),
+(11, 'FNQowwwwYa0'),
+(12, 'Ke1Y3P9D0Bc');
 
 -- --------------------------------------------------------
 
@@ -365,7 +397,11 @@ INSERT INTO `summary` (`MNO`, `SUM`) VALUES
 (5, 'In the near future, Earth has been devastated by drought and famine, causing a scarcity in food and extreme changes in climate. When humanity is facing extinction, a mysterious rip in the space-time continuum is discovered, giving mankind the opportunity to widen its lifespan. A group of explorers must travel beyond our solar system in search of a planet that can sustain life. The crew of the Endurance are required to think bigger and go further than any human in history as they embark on an interstellar voyage into the unknown. Coop, the pilot of the Endurance, must decide between seeing his children again and the future of the human race.'),
 (6, 'In the end of the Nineteenth Century, in London, Robert Angier, his beloved wife Julia McCullough and Alfred Borden are friends and assistants of a magician. When Julia accidentally dies during a performance, Robert blames Alfred for her death and they become enemies. Both become famous and rival magicians, sabotaging the performance of the other on the stage. When Alfred performs a successful trick, Robert becomes obsessed trying to disclose the secret of his competitor with tragic consequences.'),
 (7, 'Two mutant brothers, Logan and Victor, born 200 years ago, suffer childhood trauma and have only each other to depend on. Basically, they''re fighters and killers, living from war to war through U.S. history. In modern times, a U.S. colonel, Stryker, recruits them and other mutants as commandos. Logan quits and becomes a logger, falling in love with a local teacher. When Logan refuses to rejoin Stryker''s crew, the colonel sends the murderous Victor. Logan now wants revenge.'),
-(8, 'When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth''s Mightiest Heroes, including Iron Man, Captain America, Thor, the Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for a global adventure.');
+(8, 'When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and Earth''s Mightiest Heroes, including Iron Man, Captain America, Thor, the Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as the fate of the planet hangs in the balance. As the villainous Ultron emerges, it is up to the Avengers to stop him from enacting his terrible plans, and soon uneasy alliances and unexpected action pave the way for a global adventure.'),
+(9, 'As Steve Rogers struggles to embrace his role in the modern world, he teams up with another super soldier, the black widow, to battle a new threat from old history: an assassin known as the Winter Soldier.'),
+(10, 'After being held captive in an Afghan cave, an industrialist creates a unique weaponized suit of armor to fight against evil. This leads him to conflict within his own company.'),
+(11, 'With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press, and the public to share his technology with the military. Unwilling to let go of his invention, Stark, along with Pepper Potts, and James "Rhodey" Rhodes at his side, must forge new alliances - and confront powerful enemies.'),
+(12, 'Marvel''s "Iron Man 3" pits brash-but-brilliant industrialist Tony Stark/Iron Man against an enemy whose reach knows no bounds. When Stark finds his personal world destroyed at his enemy''s hands, he embarks on a harrowing quest to find those responsible. This journey, at every turn, will test his mettle. With his back against the wall, Stark is left to survive by his own devices, relying on his ingenuity and instincts to protect those closest to him. As he fights his way back, Stark discovers the answer to the question that has secretly haunted him: does the man make the suit or does the suit make the man?');
 
 --
 -- Indexes for dumped tables
@@ -449,7 +485,7 @@ MODIFY `DNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
