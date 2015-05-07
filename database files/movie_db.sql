@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2015 at 04:01 PM
+-- Generation Time: May 07, 2015 at 04:31 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
   `ANAME` varchar(50) NOT NULL,
   `DOB` date NOT NULL,
   `DEBUT` year(4) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1 COMMENT='Contains details of the Actors';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1 COMMENT='Contains details of the Actors';
 
 --
 -- Dumping data for table `actor`
@@ -60,7 +60,11 @@ INSERT INTO `actor` (`ANO`, `ANAME`, `DOB`, `DEBUT`) VALUES
 (17, 'Robert Downey Jr.', '1965-04-04', 1970),
 (18, 'Chris Evans', '1981-06-13', 1999),
 (19, 'Samuel L. Jackson', '1948-12-21', 1972),
-(20, 'Mark Ruffalo', '1967-11-22', 1988);
+(20, 'Mark Ruffalo', '1967-11-22', 1988),
+(21, 'Gwyneth Paltrow', '1972-09-27', 1989),
+(22, 'Terrence Howard', '1969-03-11', 1992),
+(23, 'Mickey Rourke', '1952-09-16', 1979),
+(24, 'Guy Pearce', '1967-10-05', 1986);
 
 -- --------------------------------------------------------
 
@@ -98,7 +102,11 @@ INSERT INTO `ac_img` (`ANO`, `IMG_NAME`) VALUES
 (17, 'RD.jpg'),
 (18, 'CE.jpg'),
 (19, 'SAJ.jpg'),
-(20, 'MR.jpg');
+(20, 'MR.jpg'),
+(21, 'GP.jpg'),
+(22, 'TeH.jpg'),
+(23, 'MiR.jpg'),
+(24, 'GUP.jpg');
 
 -- --------------------------------------------------------
 
@@ -111,7 +119,19 @@ CREATE TABLE IF NOT EXISTS `directors` (
 `DNO` bigint(20) unsigned NOT NULL,
   `DNAME` varchar(50) NOT NULL,
   `DOB` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains details of Directors';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Contains details of Directors';
+
+--
+-- Dumping data for table `directors`
+--
+
+INSERT INTO `directors` (`DNO`, `DNAME`, `DOB`) VALUES
+(1, 'Christopher Nolan', '1970-07-30'),
+(2, 'Gavin Hood', '1963-05-12'),
+(3, 'Shane Black', '1961-12-16'),
+(4, 'Joss Whedon', '1964-06-23'),
+(5, 'Jon Favreau', '1966-10-16'),
+(6, 'Anthony Russo', '1965-08-19');
 
 -- --------------------------------------------------------
 
@@ -124,6 +144,18 @@ CREATE TABLE IF NOT EXISTS `dr_img` (
   `DNO` int(11) NOT NULL,
   `IMG` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dr_img`
+--
+
+INSERT INTO `dr_img` (`DNO`, `IMG`) VALUES
+(1, 'CN.jpg'),
+(2, 'GH.jpg'),
+(3, 'SB.jpg'),
+(4, 'JW.jpeg'),
+(5, 'JF.jpg'),
+(6, 'AR.jpg');
 
 -- --------------------------------------------------------
 
@@ -286,12 +318,12 @@ ALTER TABLE `mv_tr`
 -- AUTO_INCREMENT for table `actor`
 --
 ALTER TABLE `actor`
-MODIFY `ANO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+MODIFY `ANO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `directors`
 --
 ALTER TABLE `directors`
-MODIFY `DNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+MODIFY `DNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `movie`
 --
