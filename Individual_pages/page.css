@@ -8,6 +8,10 @@ tr.sty2
 	font-size:22px;
 	text-align:center;
 }
+td.sty1
+{
+	width:130px;
+}
 h1
 {
 	font-size:45px;

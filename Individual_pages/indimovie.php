@@ -157,7 +157,7 @@
 		<td>Director:<a href="indidirector.php?dno=<?php echo $dno; ?>"> <?php echo ($dname)?> </a> </td>
 	</tr>
 	<tr class="sty2">
-		<td colspan="2">Release Date: <?php echo $dor ?> </td>
+		<td colspan="2"><br/><br/>Release Date: <?php echo $dor ?> </td>
 	</tr>
 	<tr class="sty2">
 		<td colspan="2">Box Office Collection: $<?php echo $boc ?> </td>
@@ -165,7 +165,7 @@
 	<tr class="sty2">
 		<td colspan="2"><h2>Summary</h2><br/><?php echo $sum; ?></td>
 	</tr>
-	<tr class="sty2">
+	<tr>
 		<td colspan="2" align="center"><hr size="5" color="black"/></td>
 	</tr>
 	<tr class="sty2">

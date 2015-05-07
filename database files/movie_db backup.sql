@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 09:02 PM
+-- Generation Time: May 07, 2015 at 03:03 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `DOR` date NOT NULL,
   `RATING` float NOT NULL,
   `BOC` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Contains Movie details';
 
 --
 -- Dumping data for table `movie`
@@ -127,7 +127,8 @@ CREATE TABLE IF NOT EXISTS `movie` (
 INSERT INTO `movie` (`MNO`, `MNAME`, `DOR`, `RATING`, `BOC`) VALUES
 (1, 'The Dark Knight', '2008-07-24', 9.9, 1003434911),
 (2, 'Test2', '2015-05-06', 5, 5000),
-(3, 'test3', '2009-08-31', 4, 4234);
+(3, 'test3', '2009-08-31', 4, 4234),
+(4, 'test4', '2015-05-03', 2, 2345);
 
 -- --------------------------------------------------------
 
@@ -150,7 +151,8 @@ INSERT INTO `mv_ac` (`MNO`, `ANO`) VALUES
 (1, 2),
 (2, 1),
 (2, 2),
-(3, 1);
+(3, 1),
+(4, 1);
 
 -- --------------------------------------------------------
 
@@ -171,7 +173,8 @@ CREATE TABLE IF NOT EXISTS `mv_dr` (
 INSERT INTO `mv_dr` (`MNO`, `DNO`) VALUES
 (1, 1),
 (2, 1),
-(3, 1);
+(3, 1),
+(4, 1);
 
 -- --------------------------------------------------------
 
@@ -193,9 +196,10 @@ CREATE TABLE IF NOT EXISTS `mv_gallery` (
 
 INSERT INTO `mv_gallery` (`MNO`, `IMG1`, `IMG2`, `IMG3`) VALUES
 (0, '', '', ''),
-(1, 'dk1', 'dk2', 'dk3'),
+(1, 'dk1.jpg', 'dk2.jpg', 'dk3.jpg'),
 (2, 'download (1).jpg', 'download (2).jpg', 'download (3).jpg'),
-(3, 'ZA-wp5.jpg', 'ZA-wp4.jpg', 'ZA-wp3.jpg');
+(3, 'ZA-wp5.jpg', 'ZA-wp4.jpg', 'ZA-wp3.jpg'),
+(4, 'PhotoFunia-975e60.jpg', 'PhotoFunia-a294ff.jpg', 'PhotoFunia-a29dd4.jpg');
 
 -- --------------------------------------------------------
 
@@ -216,7 +220,8 @@ CREATE TABLE IF NOT EXISTS `mv_post` (
 INSERT INTO `mv_post` (`MNO`, `IMG_NAME`) VALUES
 (1, 'dk.jpg'),
 (2, '2681-nemisis-1920-1200.png'),
-(3, 'ZA-wp6.jpg');
+(3, 'ZA-wp6.jpg'),
+(4, 'PhotoFunia-976f4c.jpg');
 
 -- --------------------------------------------------------
 
@@ -227,8 +232,16 @@ INSERT INTO `mv_post` (`MNO`, `IMG_NAME`) VALUES
 DROP TABLE IF EXISTS `mv_tr`;
 CREATE TABLE IF NOT EXISTS `mv_tr` (
   `MNO` int(10) DEFAULT NULL,
-  `tr` varchar(30) DEFAULT NULL
+  `tr` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains the Trailer vidoeID';
+
+--
+-- Dumping data for table `mv_tr`
+--
+
+INSERT INTO `mv_tr` (`MNO`, `tr`) VALUES
+(1, 'EXeTwQWrcwY'),
+(4, '5y2szViJlaY');
 
 -- --------------------------------------------------------
 
@@ -247,7 +260,8 @@ CREATE TABLE IF NOT EXISTS `summary` (
 --
 
 INSERT INTO `summary` (`MNO`, `SUM`) VALUES
-(1, 'Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the city streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as The Joker.');
+(1, 'Batman raises the stakes in his war on crime. With the help of Lieutenant Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the city streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as The Joker.'),
+(4, 'The Dark Knight (2008) Official Trailer #1 - Christopher Nolan Movie HD A skilled extractor is offered a chance ...');
 
 --
 -- Indexes for dumped tables
@@ -308,6 +322,12 @@ ALTER TABLE `mv_post`
  ADD UNIQUE KEY `MNO` (`MNO`);
 
 --
+-- Indexes for table `mv_tr`
+--
+ALTER TABLE `mv_tr`
+ ADD UNIQUE KEY `MNO` (`MNO`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -325,7 +345,7 @@ MODIFY `DNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `MNO` bigint(20) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
