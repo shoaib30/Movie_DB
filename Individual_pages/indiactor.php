@@ -82,8 +82,12 @@
 	<tr class="sty1">
 		<td>Debut : <?php echo $debut ?></td>
 	</tr>
+	<tr>
+		<td colspan="2"><hr size="2" color="black"/></td>
+	</tr>
+	<br/>
 	<tr class="sty2">
-		<td colspan="2" align="center">Movies Acted in : 
+		<td colspan="2" align="center"><br/>Movies Acted in : <br/>
 															<?php 
 															
 																if($i)
