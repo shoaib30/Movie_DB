@@ -11,7 +11,7 @@
 	}
 	$mno=$_GET["mno"];
 	$query1="select * from mv_gallery where mno='{$mno}'";
-	$result1= mysqli_query($connection,$query1);
+	$result= mysqli_query($connection,$query1);
 	$row=mysqli_fetch_assoc($result);
 	$img1=$row["IMG1"];
 	$img2=$row["IMG2"];
@@ -53,11 +53,11 @@
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 450px;
             overflow: hidden;">
-            <div><img u="image" src="../dk1.jpg" /></div>
-            <div><img u="image" src="../dk2.jpg" /></div>
-            <div><img u="image" src="../dk3.jpg" /></div>
-            <div><img u="image" src="../dk4.jpg" /></div>
-            <div><img u="image" src="../dk5.jpg" /></div>
+            <div><img u="image" src="../<?php echo $img1;?>" /></div>
+            <div><img u="image" src="../<?php echo $img2;?>" /></div>
+            <div><img u="image" src="../<?php echo $img3;?>" /></div>
+            <!--<div><img u="image" src="../dk4.jpg" /></div>
+            <div><img u="image" src="../dk5.jpg" /></div>-->
         </div>
         
         <!--#region Arrow Navigator Skin Begin -->

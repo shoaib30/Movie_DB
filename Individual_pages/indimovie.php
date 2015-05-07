@@ -180,7 +180,7 @@
 		<td colspan="2"><!--<caption style="font-size:20px">-->Trailor<iframe width="720" height="480" src="https://www.youtube.com/embed/<?php echo $tr;?>" frameborder="0"></iframe><!--</caption>--></td>
 	</tr>
 	<tr>
-		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="../Gallery/SLIDER/slider.html" frameborder="0"></iframe><!--</caption>--></td>
+		<td colspan="2"><!--<caption style="font-size:20px">-->Gallery<iframe width="900" height="500" src="../Gallery/SLIDER/slider.php?mno=<?php echo $mno;?>" frameborder="0"></iframe><!--</caption>--></td>
 	</tr>
 	</table>
 </body>
